@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HeeDo Shin - Personal Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
+    <style>
+        * { margin: 0; padding: 0; text-decoration: none; list-style: none; }
+        body {  background-color: #00d9ff88; }
+        .body { width: 1200px; height: 960px; margin: 0 auto; }
+        header { height: 100px; text-align: center; line-height: 100px; text-shadow: 5px 5px 8px black; font-size: x-large; font-style: italic; }
+        .manu { width: 300px; height: 679px; text-align: center; font-size: x-large; text-shadow: 3px 3px 5px black; background-color: yellow; float: left;}
+        .manu > ul > li { margin-top: 80px; }
+        .manu > ul > li:hover { font-size: xx-large; }
+        img { margin: 10px; }
+        .contants { width: 900px; height: 679px; background-color: gold; float: left; text-align: center;}
+        footer { height: 100px; background-color: yellowgreen;}
+        .container:after { content: ''; display: block; clear: both;}
+        .subtitle { font-size: 40px; }
+        p { font-size: 24px; }
+        #MainManu { display: block; }
+        #Hobby { display: none; }
+        #Dream { display: none; }
+        .email { text-align: center; line-height: 100px; font-size: xx-large; }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <header><h1>HeeDo Shin Web Page</h1></header>
+        <div class="container">
+            <aside class="manu">
+                <img src="C:\Users\jun02\Desktop\img.jpg" alt="내 사진" width="270" height="270">
+                <ul>
+                    <li><a href="#MainManu" onclick="MainManu()">Main manu</a></li>
+                    <li><a href="#Hobby" onclick="Hobby()">Hobby</a></li>
+                    <li><a href="#Dream" onclick="Dream()">Dream</a></li>
+                </ul>
+            </aside>
+            <article class="contants">
+                <br>
+                <div id="MainManu">
+                    <h1 class="subtitle">Introduction</h1>
+                    <br>
+                    <p>
+                        I was born and raised in ChunCheon and graduated from Bongeui High School.
+                        I have lived in ChunCheon for more than 20 years.
+                        Currently, I am a student at <a href="https://wwwk.kangwon.ac.kr/" target="_blank">Kangwon National University</a> in Chuncheon.
+                        And my major is Department of Computer Science and Engineering.
+                        I entered the military when I finished my freshman year.
+                        And I took a year off and returned to college.
+                        So, now I'm a sophomore in University and studying my major.
+                    </p>
+                </div>
+                <div id="Hobby">
+                    <h1 class="subtitle">Hobby</h1>
+                    <br>
+                    <p>
+                        I like to work out at the gym. Currently, I work out four times a week and two times dividing my upper and lower body.
+                        At first, I started just to lose my weight, but now it's part of my life. I lost my weight from 88kg to 72kg.
+                        I felt a sense of accomplishment when I heard that I lost weight.
+                        My goal is to build a good body without getting hurt.
+                    </p>
+                    <br>
+                    <video src="C:\Users\jun02\Desktop\benchpress.mp4" alt="운동 영상" controls="contorls" width="800" height="300"></video>
+                </div>
+                <div id="Dream">
+                    <h1 class="subtitle">Dream</h1>
+                    <br>
+                    <p>
+                        My career path has not been decided yet, but I'm thinking of a game developer.
+                        Because I have liked games since I was young and I was curious about how these games were made.
+                        I'm also interested in AR and VR as well as game development.
+                        Finally, it may be hard, I want to make a game with VR.
+                    </p>
+                </div>
+            </article>
+        </div>
+        <footer>
+            <div class="email">
+                My Email: <a href="mailto:gojob123@naver.com" target="_blank">gojob123@naver.com</a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const manu = document.getElementById('MainManu');
+        const hobby = document.getElementById('Hobby');
+        const dream = document.getElementById('Dream');
+
+        function MainManu() {
+            manu.style.display = 'block';
+            hobby.style.display = 'none';
+            dream.style.display = 'none';
+        }
+
+        function Hobby() {
+            manu.style.display = 'none';
+            hobby.style.display = 'block';
+            dream.style.display = 'none';
+        }
+
+        function Dream() {
+            manu.style.display = 'none';
+            hobby.style.display = 'none';
+            dream.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
